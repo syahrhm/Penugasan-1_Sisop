@@ -1,0 +1,21 @@
+mkdir justlinux
+cd justlinux && export fileid=1V35Y4mZo6HFNclvBi80v484KWRLo6sJI && export filename=latihan.zip && wget -O $filename 'https://docs.google.com/uc?export=download&id='$fileid
+unzip latihan.zip -d latihan
+ls
+chmod +x runme.sh && chmod +x daemon.sh && ./runme.sh && ./daemon.sh
+ps aux | grep daemon.sh
+kill -9 (PID daemon.sh)
+ps aux
+awk -F':' '{ print $1}' /etc/passwd
+sudo adduser sisopmudah
+sudo usermod -a -G sudo sisopmudah
+getent group sudo
+sudo -S su - sisopmudah -c "mkdir puzzle; /bin/bash"
+sudo -S su - nayla -c "cd /home/nayla/justlinux/latihan; /bin/bash"
+unzip s3cr3t_v4u1t.zip
+sudo -S su - sisopmudah -c "cd /home/sisopmudah/puzzle; /bin/bash"
+echo "ENIGMA: " >> encryption.txt; sudo -S find /home/nayla/justlinux/latihan/s3cr3t_v4u1t -name "fragment_*.php" -exec grep -o enigma {} \; | wc -l >> encryption.txt; cat encryption.txt
+echo "UNKNOWN: " >> encryption.txt; sudo -S find /home/honque/justlinux/latihan/s3cr3t_v4u1t -name "fragment_*.php" -exec grep -o unknown {} \; | wc -l >> encryption.txt; cat encryption.txt
+sudo -S find /home/honque/justlinux/latihan/s3cr3t_v4u1t -name "fragment_*.php" -exec awk 'END{print}' {} \; | xxd -r -p > temp.txt && grep -Pao 'flag\{.*?\}' temp.txt > flag.txt; cat flag.txt
+UPLOAD KE GITHUB
+userdel sisopsusah
